@@ -1,0 +1,23 @@
+<apex:page standardController="account" tabStyle="account" showHeader="true" showChat="true">
+
+<style>
+ .bcc{backgroundcolor:black;color:red}
+ .bss{backgroundcolor:black;color:blue}
+</style>
+
+<apex:tabPanel activeTabClass="bcc" inactiveTabClass="bss">
+
+    <apex:tab name="Account" label="Account">
+        <apex:detail relatedList="false" title="true"/>
+    </apex:tab>
+
+    <apex:tab name="Contacts" label="Contacts">
+        <apex:relatedList subject="{!account}" list="contacts"/>
+    </apex:tab>
+
+    <apex:tab name="Opportunities" label="Opportunities">
+        <apex:relatedList subject="{!account}" list="Opportunities"/>
+    </apex:tab>
+    
+</apex:tabPanel>
+</apex:page>

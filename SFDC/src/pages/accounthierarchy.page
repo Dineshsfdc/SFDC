@@ -1,0 +1,105 @@
+<apex:page standardController="account" extensions="accounthierarchy">
+
+<apex:includeScript value="{!URLFOR($Resource.jquery, '/js/jquery-1.4.2.min.js')}"  />
+<apex:includeScript value="{!URLFOR($Resource.jquery, '/js/jquery-ui-1.8.6.custom.min.js')}"  />
+<apex:stylesheet value="{!URLFOR($Resource.jquery, '/css/ui-lightness/jquery-ui-1.8.6.custom.css')}"/> 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link rel="stylesheet" href="{!URLFOR($Resource.Jtreeview,'Jquerytreeview/jquery.treeview.css')}"/>
+    <script src="{!URLFOR($Resource.Jtreeview,'Jquerytreeview/jquery.js')}" type="text/javascript"></script>
+    <script src="{!URLFOR($Resource.Jtreeview,'Jquerytreeview/jquery.cookie.js')}" type="text/javascript"></script>
+    <script src="{!URLFOR($Resource.Jtreeview,'Jquerytreeview/jquery.treeview.js')}" type="text/javascript"></script>
+
+
+<script>
+$j = jQuery.noConflict();
+ $j(document).ready(function(){    
+  <!-- $j('.s1').click(function(){
+   alert("hi"); -->
+   $j("#tree").treeview({  
+ collapsed: true,  
+ animated: "fast",  
+ control:"#sidetreecontrol"  
+ } 
+ });
+});
+</script>
+
+
+<style type="text/css">
+  #browser {
+    font-family: Verdana, helvetica, arial, sans-serif;
+    font-size: 100%;
+  }
+</style>
+
+<!--<apex:stylesheet value="{!URLFOR($Resource.OrgChartCSS)}"/>
+<style>
+.expandIcon {
+ width:16px;
+ height:16px;
+ background-image: url('{!URLFOR($Resource.OrgChartPng)}');
+ background-repeat: no-repeat;
+ } 
+
+</style>-->
+
+ <!-- <apex:form id="f1" > 
+  <ul id="browser">
+  <apex:repeat value="{!hierarchyItemList}" var="item">
+  <li>
+   {!item.itemValue}
+  </li>
+  </apex:repeat>
+  </ul>
+  </apex:form>  -->
+
+
+<apex:pageBlock >
+<div class="treeheader" style="height:0px;"> </div>
+<div id="sidetreecontrol"><a href="?#"><font style="color:grey;">Collapse All</font></a> | <a href="?#"><font style="color:grey;">Expand All</font></a></div>
+
+<ul id='tree'>
+    <apex:repeat value="{!hierarchyItemList}" var="item">
+        <li><strong><apex:outputlabel style="color:black;" value="{!item.itemValue}"></apex:outputlabel></strong>    
+        </li>
+    </apex:repeat>
+</ul>
+</apex:pageBlock>
+
+
+<!-- End of Tree -->       
+
+
+
+  <!--<apex:form id="f1" >  
+     <apex:pageBlock id="pb" >  
+         <apex:pageblockSection id="pbs" columns="1" title="Hierarchy">  
+             <apex:repeat value="{!hierarchyItemList}" var="item">  
+                  <apex:pageBlockSectionItem >  
+                    <apex:outputLabel id="browser" styleclass="s1" value="{!item.itemValue}" escape="false"/>   
+                  </apex:pageBlockSectionItem>   
+                 </apex:repeat>  
+         </apex:pageblockSection>  
+     </apex:pageBlock>  
+  </apex:form> -->
+  
+  
+  <!-- <apex:includeScript value="{!URLFOR($Resource.jquery, '/js/jquery-1.4.2.min.js')}"  />
+   <apex:includeScript value="{!URLFOR($Resource.jquery, '/js/jquery-ui-1.8.6.custom.min.js')}"  />
+   <apex:stylesheet value="{!URLFOR($Resource.jquery, '/css/ui-lightness/jquery-ui-1.8.6.custom.css')}"/> 
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+ <script>
+ $(document).ready(function(){
+   $("p").click(function(){
+   alert("hi");
+    $(this).hide();
+   });
+});
+</script>
+
+
+<p>If you click on me, I will disappear.</p>
+<p>Click me away!</p>
+<p>Click me too!</p>  -->
+  
+</apex:page>

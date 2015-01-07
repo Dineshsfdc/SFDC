@@ -1,0 +1,28 @@
+<apex:page standardController="Rule__c"  extensions="Dynamicworkflowcontroller" sidebar="false">
+ <apex:form >
+ <apex:pageblock >
+ <apex:pageblockButtons >
+ <apex:commandButton value="Save"/>
+ </apex:pageblockButtons>
+<apex:pageblocksection title="Add rule" columns="4">
+<apex:inputfield label="Field name" value="{!Rule__c.fieldname1__c}"/>
+<apex:inputfield label="Operator" value="{!Rule__c.Operator1__c}"/>
+<apex:inputfield label="Value" value="{!Rule__c.Value1__c}"/>
+<apex:inputfield label="Condition" value="{!Rule__c.Condition1__c}"/>
+
+<apex:inputfield label="Field name" value="{!Rule__c.Fieldname2__c}"/>
+<apex:inputfield label="Operator" value="{!Rule__c.Operator2__c}"/>
+<apex:inputfield label="Value" value="{!Rule__c.Value2__c}"/>
+<apex:inputfield label="Condition" value="{!Rule__c.Condition2__c}"/>
+
+</apex:pageblocksection>
+
+<apex:pageblocksection title="Send Email Details" columns="1">
+<apex:inputfield value="{!Rule__c.To_Address__c}"/>
+<apex:inputfield value="{!Rule__c.Subject__c}"/>
+<apex:inputfield value="{!Rule__c.Body1__c}"/>
+</apex:pageblocksection>
+ </apex:pageblock>
+ 
+ </apex:form>
+</apex:page>

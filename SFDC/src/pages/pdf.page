@@ -1,0 +1,34 @@
+<apex:page standardController="account">
+<apex:pageBlock title="Hello {!$User.FirstName}!">
+You are displaying contacts from the {!account.name} account.
+Click a contact's name to view his or her details.
+</apex:pageBlock>
+<apex:pageBlock title="Contacts">
+<apex:form >
+<apex:dataTable value="{!account.Contacts}" var="contact" cellPadding="4"
+border="1">
+<apex:column >
+<apex:commandLink reRender="detail1">
+{!contact.Name}
+<apex:param name="cid" value="{!contact.id}"/>
+</apex:commandlink>
+</apex:column>
+</apex:datatable>
+</apex:form>
+</apex:pageblock>
+
+
+
+
+
+<apex:outputPanel id="detail1">
+
+
+
+<apex:detail subject="{!$CurrentPage.parameters.cid}" relatedList="false"
+title="false"/>
+
+</apex:outputPanel>
+  
+ 
+</apex:page>

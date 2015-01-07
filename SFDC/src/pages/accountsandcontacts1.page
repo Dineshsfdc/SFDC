@@ -1,0 +1,40 @@
+<apex:page standardcontroller="account" showHeader="false" extensions="accountsandcontacts1controller" tabStyle="contact" sidebar="false">
+<apex:form >
+ <apex:pageblock title="contacts">
+ <p>{!recordid}</p>
+ 
+ <apex:pageBlockTable value="{!contacts}" var="contact" cellpadding="5" cellspacing="5" border="5" style="text-transform: uppercase" >
+ <apex:column value="{!contact.name}"/>
+ <apex:column value="{!contact.title}"/>
+ <apex:column value="{!contact.email}"/>
+ <apex:column value="{!contact.phone}"/>
+ <apex:column headerValue="link to contacts">
+ <apex:outputLink value="{!'/'&contact.id}">
+ 
+link
+ </apex:outputLink>
+<apex:outputlink value="{!$Page.customDetailPage}?id={!account.id}">
+  {!account.Name}
+  </apex:outputLink>
+ </apex:column>
+</apex:pageblocktable>
+  
+  </apex:pageblock>
+  
+  
+ <!--  <apex:pageblock >
+   <apex:pageblockSection >
+      <apex:inputCheckbox value="{!cse}">CSE</apex:inputcheckbox><br/>
+      <apex:inputCheckbox value="{!it}">IT</apex:inputcheckbox><br/>
+      <apex:inputCheckbox value="{!ece}">ECE</apex:inputcheckbox><br/>
+      <apex:outputLabel value="result"></apex:outputLabel><br/>
+      <apex:outputtext value="{!result}"></apex:outputtext>
+  <apex:commandButton value="Generate password" action="{!view}"/>
+  
+   </apex:pageblockSection>
+  
+  </apex:pageblock> -->
+ 
+ </apex:form>
+ 
+</apex:page>

@@ -1,0 +1,11 @@
+<apex:page controller="SelectOptionsCon">
+    <apex:form >
+        <apex:pageBlock title="Select Options">
+            <apex:pageBlockSection >
+                <apex:selectList multiselect="false" size="1">
+                    <apex:selectOptions value="{!Val}"/>
+                </apex:selectList>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

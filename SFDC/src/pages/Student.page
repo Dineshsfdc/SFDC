@@ -1,0 +1,16 @@
+<apex:page controller="studentcontroller">
+
+  <apex:form >
+  <apex:pageBlock id="pg" >
+   <apex:Pageblocksection columns="1">
+   <apex:inputField value="{!st.name}"/>
+   <apex:inputField value="{!st.Mentor__c}"/>
+   
+    <apex:inputfield value="{!st.name__c}">
+     <apex:actionSupport event="onclick" action="{!getval}" rerender="pg"/>
+    </apex:inputfield>
+    
+   </apex:Pageblocksection>
+  </apex:pageBlock>
+</apex:form>
+</apex:page>

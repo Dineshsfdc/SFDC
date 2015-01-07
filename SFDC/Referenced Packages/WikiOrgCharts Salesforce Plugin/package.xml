@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WikiOrgCharts Salesforce Plugin</fullName>
+    <apiAccessLevel>Unrestricted</apiAccessLevel>
+    <description>WikiOrgCharts</description>
+    <namespacePrefix>wikiorgchart</namespacePrefix>
+    <types>
+        <members>AccountWebServiceCallout</members>
+        <members>ContactWebServiceCallout</members>
+        <members>testTriggers</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>AccountTriggers</members>
+        <members>ContactTriggers</members>
+        <name>ApexTrigger</name>
+    </types>
+    <types>
+        <members>WikiOrgCharts_Application</members>
+        <name>CustomApplication</name>
+    </types>
+    <types>
+        <members>WikiOrgCharts</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
+        <members>Public_folder</members>
+        <members>Public_folder/favicon.jpg</members>
+        <name>Document</name>
+    </types>
+    <types>
+        <members>WikiOrgCharts_Salesforce_Plugin_Server</members>
+        <name>RemoteSiteSetting</name>
+    </types>
+    <types>
+        <members>Account.View_In_Org_Chart</members>
+        <members>Contact.View_In_Org_Chart</members>
+        <name>WebLink</name>
+    </types>
+    <version>31.0</version>
+</Package>

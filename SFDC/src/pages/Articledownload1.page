@@ -1,0 +1,26 @@
+<apex:page controller="articledownloadcontroller1" title="Articles list">
+<apex:form >
+<apex:pageblock title="Articles list">
+<apex:pageblockButtons >
+<apex:commandbutton value="Download All" action="{!downloadall}"/>
+</apex:pageblockButtons>
+<apex:Pageblocktable value="{!art}" var="f1">
+
+<apex:column headervalue="Click the Link to Download">
+<apex:commandlink value="{!f1.id}" action="{!download}">
+<apex:param name="artid" value="{!f1.id}"/>
+</apex:commandlink>
+</apex:column>
+
+<apex:column headervalue="Article Title" value="{!f1.title}"/>
+
+<apex:column headervalue="URL Name" value="{!f1.urlname}"/>
+
+<apex:column headervalue="Published status" value="{!f1.PublishStatus}"/>
+
+<apex:column headervalue="Language" value="{!f1.language}"/>
+
+</apex:Pageblocktable>
+</apex:pageblock>  
+</apex:form>
+</apex:page>

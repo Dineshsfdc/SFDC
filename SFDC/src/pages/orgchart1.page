@@ -1,0 +1,47 @@
+<apex:page sidebar="false" showheader="false" standardController="Account" extensions="orgchartcontroller1">
+
+<!-- Include the Jquery Script files -->
+
+   <link rel="stylesheet" href="{!URLFOR($Resource.Jtreeview,'Jquerytreeview/jquery.treeview.css')}"/>
+    <script src="{!URLFOR($Resource.Jtreeview,'Jquerytreeview/jquery.js')}" type="text/javascript"></script>
+    <script src="{!URLFOR($Resource.Jtreeview,'Jquerytreeview/jquery.cookie.js')}" type="text/javascript"></script>
+    <script src="{!URLFOR($Resource.Jtreeview,'Jquerytreeview/jquery.treeview.js')}" type="text/javascript"></script> 
+    
+<!-- End of Javascript files -->
+
+<script type="text/javascript">
+        $(function() {
+            $("#tree").treeview({
+                collapsed: false,
+                animated: "medium",
+                control:"#sidetreecontrol",
+                persist: "location"
+            });
+        })
+</script>
+<br/> <br/> <br/>  
+
+
+<!-- Tree -->
+
+<div class="treeheader" style="height:0px;">&nbsp;</div>
+<div id="sidetreecontrol"></div>
+<ul id="tree">
+<h1>Org chart for accounts</h1>
+<br/><br/><br/>
+    <apex:repeat value="{!mainnodes}" var="parent">
+        <li><strong><apex:outputtext style="color:blue;" escape="false" value="{!parent.gparent.Name}"/></strong>
+             <ul>
+                 <apex:repeat value="{!parent.parent}" var="child">
+                    <li>
+                    <span class="formattextcon"><apex:outputtext style="color:green;" escape="false" value="{!child.name}"/></span>
+                              
+                    </li>
+                 </apex:repeat>  
+             </ul>  
+        </li>
+    </apex:repeat>
+</ul> 
+
+<!-- End of Tree -->       
+</apex:page>

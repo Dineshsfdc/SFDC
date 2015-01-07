@@ -1,0 +1,25 @@
+<apex:page sidebar="false" >
+
+<apex:pageBlock title="College">
+
+<apex:pageBlockSection title="student" >
+National Engg College
+</apex:pageBlockSection>
+
+<apex:pageBlockSection title="staff" >
+National Engg College
+</apex:pageBlockSection>
+
+
+</apex:pageBlock>
+{!$User.FirstName}
+{!$User.LastName}
+<p>Today date is {!today()}</p>
+<p> Year is {!year(today())}</p>
+square root of 36 is {!sqrt(36)}<br></br>
+<p>Is it true {!contains('dinesh kumar','kumar')}</p>
+<p>{! if(contains('dinesh','din'),'yes','no')}</p>
+
+
+
+</apex:page>

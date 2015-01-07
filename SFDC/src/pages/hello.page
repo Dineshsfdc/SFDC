@@ -1,0 +1,17 @@
+<apex:page sidebar="false" standardstylesheets="false" standardController="account">
+  <!-- Begin Default Content REMOVE THIS -->
+  <h2><b><i>Congratulations</i></b></h2>
+  <h2>hai</h2><style>
+body {font-family: Arial Unicode MS;}
+h1 {color:red;}
+</style>
+  
+  <apex:pageBlock ><h1>sample page</h1></apex:pageBlock>
+  <apex:form >
+  <apex:inputField value="{!account.name}"/>
+  <apex:commandButton action="{!save}" value="save"/>
+  <apex:pagemessages ></apex:pagemessages>
+  </apex:form>
+  
+ 
+</apex:page>

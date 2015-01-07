@@ -1,0 +1,25 @@
+<apex:page Controller="checksobjectprofiles">  
+   <apex:form id="Describe">
+      <apex:pageBlock id="block2" >
+         <apex:pageblockbuttons location="top" >
+            <apex:commandButton value="CHECK" action="{!checkFields}"/>
+         </apex:pageblockbuttons>
+        
+       <apex:pageBlockSection title="SELECT INFO">
+          <apex:selectList value="{!selecteduserId}" size="1" multiselect="false"  >
+           <apex:selectOptions value="{!ListOfUser}" />
+           
+            </apex:selectList>
+       </apex:pageBlockSection>
+       
+        <apex:pageblocksection >
+          <apex:selectList value="{!selectedObject}" size="1">
+           <apex:selectOptions value="{!objectNames}"/>
+          </apex:selectList>
+        </apex:pageblocksection>
+        
+     
+       
+       </apex:pageBlock>
+    </apex:form>
+</apex:page>

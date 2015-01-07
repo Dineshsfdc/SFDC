@@ -1,0 +1,48 @@
+<apex:page controller="controlmail" sidebar="false" showHeader="false" >
+<apex:form ><script>
+setTimeout("CallButton()",1000)
+function CallButton()
+{
+window.onload = function () { document.getElementById('{!$Component.ss}').click();
+document.getElementById("ss").click();
+}
+
+
+</script>
+
+
+ <apex:pageBlock >
+ 
+ 
+ 
+ <apex:pageBlockSection columns="1">
+    <apex:outputLabel value="To"/>
+    <apex:inputtext value="{!to}"/>
+   </apex:pageBlockSection>
+   
+   <apex:pageBlockSection columns="1">
+    <apex:outputLabel value="CC"/>
+    <apex:inputtext value="{!cc}"/>
+   </apex:pageBlockSection>
+   
+   
+   <apex:pageBlockSection columns="1">
+    <apex:outputLabel value="Subject"/>
+    <apex:inputtext value="{!sub}"/>
+   </apex:pageBlockSection>
+ 
+ <apex:pageBlockSection columns="1">
+    <apex:outputLabel value="Body"/>
+    <apex:inputtext value="{!body}"/>
+   </apex:pageBlockSection>
+   
+  
+
+
+   
+ <apex:commandButton value="Send" id="ss" action="{!send}"/>
+ 
+   
+ </apex:pageblock>
+ </apex:form>
+</apex:page>

@@ -1,0 +1,25 @@
+<apex:page standardController="account" extensions="accounthierarchy1">
+
+ <apex:form id="f1" > 
+
+ <apex:pageBlock id="pb" > 
+
+ <apex:pageblockSection id="pbs" columns="1" title="Hierarchy"> 
+
+ <apex:repeat value="{!hierarchyItemList}" var="item"> 
+
+ <apex:pageBlockSectionItem > 
+
+ <apex:outputLabel value="{!item.itemValue}" escape="false"/> 
+
+ </apex:pageBlockSectionItem> 
+
+ </apex:repeat> 
+
+ </apex:pageblockSection> 
+
+ </apex:pageBlock> 
+
+ </apex:form> 
+
+</apex:page>

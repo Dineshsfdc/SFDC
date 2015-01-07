@@ -1,0 +1,25 @@
+<apex:page Sidebar="FALSE" standardController="Account" >
+  <apex:form >
+  <table border="0" width="800" height="1000" align="center">
+  
+   <div style="font-size:20px; color:#002060;" align="center"><strong>Creating Account,Contact and Opportunity</strong></div>
+   <div style="width:1000px; height:370px; font-size:30px; color:#002060"  align="center"> 
+  
+   <iframe width="620" height="380"  align="center" src="//www.youtube.com/embed/kKxYRsrNMj0" scrolling="true"  frameborder="0"></iframe><br></br> 
+   </div>  
+</table>
+
+ <!-- <br></br>
+  <br></br>
+  <table border="0" width="800" align="center">
+    <div style="background-color: #eaead2;"><br /></div>
+    <div style="background-color: #eaead2; font-size:38px; color:#002060;" align="center"><strong>DEV 401 TRAINING</strong></div>
+    <div style="background-color: #eaead2;"><br /></div>
+    <div style="background-color: #eaead2; width: 1000px; height:370px; font-size:30px; color:#002060" align="center">
+
+  <iframe width="560" height="345" align="middle" src="//www.youtube.com/embed/hapjF6nc4Xc" frameborder="0" allowfullscreen=""></iframe>
+   </div>
+</table>  -->
+
+  </apex:form>
+</apex:page>

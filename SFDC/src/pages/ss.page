@@ -1,0 +1,16 @@
+<apex:page standardcontroller="Student__c" recordSetVar="s">
+  <apex:pageblock title="contacts">
+ 
+ 
+ <apex:pageBlockTable value="{!s}" var="a" >
+ <apex:column value="{!a.name}"/>
+  <apex:column value="{!a.age__c}"/>
+  <apex:column value="{!a.Email__c}"/>
+ 
+ 
+ 
+ </apex:pageblocktable>
+  
+  </apex:pageblock>
+  
+</apex:page>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <webLinks>
+        <fullName>View_In_Org_Chart</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>View In Org Chart</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <url>https://salesforce.wikiorgcharts.com/dispach.php?wikilocation=salesforce/chart/accountId_{!Account.Id}&amp;sfapisessionid={!API.Session_ID}&amp;sfapipartnerserverurl={!API.Partner_Server_URL_200}</url>
+    </webLinks>
+</CustomObject>

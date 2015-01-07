@@ -1,0 +1,30 @@
+<apex:page controller="actionSupportController">
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockSection >
+                 <apex:outputpanel id="panel1">
+                    <apex:outputText value="Click here to increment!"/>
+                    <apex:actionSupport event="onclick" action="{!incrementCounter}" rerender="out"/>
+                    </apex:outputpanel>
+          
+                <apex:outputpanel id="panel2">
+                
+                    <apex:outputText value="Click here to decrement!"/>
+                    
+                 <apex:actionsupport event="onclick" action="{!decrementCounter}" rerender="out" status="mystatus"/> 
+                 
+                   
+                 <!--    <apex:actionpoller interval="15" action="{!decrementCounter}" rerender="out"/> -->
+                </apex:outputpanel>
+                
+                 <apex:outputpanel id="panel3">
+                    <apex:outputText value="Click here to view!"/>
+                    <apex:actionSupport event="onclick" action="{!view}"  reRender="out"/>
+                </apex:outputpanel>
+ 
+                <apex:outputText value="{!count}" id="out" label="Count Is:"/>
+ 
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

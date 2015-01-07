@@ -1,0 +1,16 @@
+<apex:page controller="callrestcontroller">
+<apex:form >
+<apex:pageBlock title="Rest APi call">
+<apex:pageblockButtons >
+<apex:commandButton action="{!centof}" value="Celsius to Farenheit"></apex:commandButton>
+<apex:commandButton action="{!fartoc}" value="Farenheit to Celsius"></apex:commandButton>
+</apex:pageblockButtons>
+<apex:pageBlockSection title="Temperature convertor" columns="2" >
+Enter Value to convert:
+<apex:inputtext value="{!value}"/>
+Converted Result:
+<apex:outputtext value="{!result}"></apex:outputtext>
+</apex:pageBlockSection>
+</apex:pageBlock>
+</apex:form>
+</apex:page>

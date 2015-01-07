@@ -1,0 +1,17 @@
+<apex:page controller="downloadpdfcontroller" renderAs="pdf">
+ <apex:form >
+ <apex:pageblock title="Article Details">
+
+<apex:datatable value="{!pro}" var="p" border="1" width="100%">
+
+<apex:column headervalue="Article number" value="{!p.ArticleNumber}"/>
+<apex:column headervalue="Title" value="{!p.title}"/>
+<apex:column headervalue="URL Name" value="{!p.UrlName}"/>
+<apex:column headervalue="Steps" value="{!p.Steps__c}"/>
+
+
+</apex:datatable>
+
+</apex:pageblock>
+</apex:form>
+</apex:page>

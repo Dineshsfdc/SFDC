@@ -1,0 +1,18 @@
+<apex:page standardController="Opportunity" recordSetVar="opp" tabstyle="opportunity">    
+<apex:form id="changePrivacyForm">
+<apex:pageBlock mode="edit">
+<apex:pageMessages />
+<apex:pageBlockButtons >
+<apex:commandButton value="Save" action="{!save}"/>  
+</apex:pageBlockButtons>
+
+<apex:pageBlockTable value="{!opp}" var="op">
+<apex:column value="{!op.name}"/>
+<apex:column value="{!op.account.name}"/> 
+<apex:column headervalue="private?">
+<apex:inputCheckbox value="{!op.isprivate}"/>
+</apex:column>
+</apex:pageBlockTable>
+</apex:pageBlock>  
+</apex:form>
+</apex:page>

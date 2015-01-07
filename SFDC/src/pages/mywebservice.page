@@ -1,0 +1,10 @@
+<apex:page controller="webservicecall2">
+<apex:form >
+  <apex:pageblock title="Invoke webservice in salesforce">
+  <apex:pageblockSection >
+  Enter Account name<apex:inputtext value="{!name}"/> 
+  <apex:commandButton value="Save" action="{!save}"/>
+  </apex:pageblockSection>
+  </apex:pageblock>
+  </apex:form>
+</apex:page>

@@ -1,0 +1,52 @@
+<apex:page standardController="Student__c" extensions="student">
+<script type="text/javascript">
+function validate()
+{
+var nameRegex = /^[a-zA-Z\-]+$/;
+    var validname = document.f.pb.pbs.pbsi.name.value.match(nameRegex);
+    if(validname == null){
+        alert("Your first name is not valid. Only characters A-Z, a-z and '-' are  acceptable.");
+        document.f.pb.pbs.pbsi.name.focus();
+        return false;
+    }
+
+}
+</script>
+
+  <!-- Begin Default Content REMOVE THIS -->
+  <h1>Congratulations</h1>
+  This is your new Page
+  <!-- End Default Content REMOVE THIS -->
+  <apex:form id="f">
+  <apex:pageMessages />
+  <apex:pageBlock id="pb" title="student details">
+  <apex:pageblockButtons >
+    <apex:commandButton value="save" onclick="validate();"  action="{!save}"/>
+  </apex:pageblockButtons>
+  <apex:pageBlockSection id="pbs" columns="2" >
+     <apex:pageBlockSectionItem id="pbsi">
+         <apex:outputLabel value="name" />
+        <apex:inputField value="{!stud.name__c}"  id="name" required="false"/>
+     </apex:pageBlockSectionItem>
+     <apex:pageBlockSectionItem >
+         <apex:outputLabel value="mark1"/>
+         <apex:inputfield id="m1" value="{!stud.mark1__c}"/>
+     </apex:pageBlockSectionItem>
+     <apex:pageBlockSectionItem >
+         <apex:outputLabel value="mark2"/>
+         <apex:inputfield value="{!stud.mark2__c}" id="m2"/>
+     </apex:pageBlockSectionItem>
+  
+    <apex:pageBlockSectionItem >
+         <apex:outputLabel value="dob"/>
+         <apex:inputfield value="{!stud.dob__c}" id="dob"/>
+     </apex:pageBlockSectionItem>
+  
+    <apex:pageBlockSectionItem >
+         <apex:outputLabel value="age"/>
+         <apex:inputfield value="{!stud.age__c}" id="age"/>
+     </apex:pageBlockSectionItem>
+   </apex:pageBlockSection>
+  </apex:pageBlock>
+    </apex:form>
+</apex:page>

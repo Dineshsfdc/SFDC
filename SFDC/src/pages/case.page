@@ -1,0 +1,3 @@
+<apex:page standardcontroller="case" extensions="casecon" action="{!caseclose}">
+  
+</apex:page>

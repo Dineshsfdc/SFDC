@@ -1,0 +1,9 @@
+<apex:page controller="pagecontroller" sidebar="false">
+<apex:form >
+<apex:commandButton value="Next Page" action="{!reloadIframe}" reRender="theFrame"/>
+<apex:outputPanel id="theFrame">
+    <apex:iframe src="{!iframeSource}" />
+</apex:outputPanel>
+</apex:form>
+
+</apex:page>

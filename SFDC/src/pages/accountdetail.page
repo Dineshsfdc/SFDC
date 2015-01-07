@@ -1,0 +1,40 @@
+<apex:page standardController="account">
+<apex:form >
+<p>Hi welcome <b><h1>Mr.{! $user.firstname}</h1></b></p>
+ 
+ <table align="center">
+ <tr>
+ <td>
+Account name:
+</td>
+<td>
+  <apex:inputfield value="{!Account.name}"></apex:inputfield></td><br></br>
+  </tr>
+  <tr>
+  <td> 
+ SLA
+ </td>
+ <td>
+ <apex:inputfield value="{!Account.SLA__c}"></apex:inputfield></td><br></br> 
+ </tr>
+ <tr>
+ <td>
+ SLA Serial number
+ </td>
+ <td>
+ <apex:inputfield value="{!Account.SLASerialNumber__c}"></apex:inputfield></td><br></br>
+ </tr>
+ <tr>
+ <td>
+ SLA Exp date
+ </td>
+ <td>
+ <apex:inputfield value="{!Account.SLAExpirationDate__c}"></apex:inputfield></td><br></br>
+ </tr>
+</table>
+<center><apex:commandbutton value="save" action="{!save}">
+ </apex:commandbutton></center><br></br>
+ <!-- <center><apex:commandbutton value="save & new" action="{!SaveAndNew}">
+ </apex:commandbutton></center><br></br>-->
+</apex:form>
+</apex:page>

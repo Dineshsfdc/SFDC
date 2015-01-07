@@ -1,0 +1,24 @@
+<apex:page standardController="Account" recordSetVar="samp" action="{!if($Profile.Name =='System Administrator', null,urlFor($Action.Account.Tab, $ObjectType.Account,null, true))}">
+    <apex:form >
+        <apex:pageBlock title="Account Details">
+             <apex:pageBlockButtons >
+                 <apex:commandButton value="cancel"/>
+             </apex:pageBlockButtons>
+             <apex:pageBlockTable value="{!samp}" var="a">
+             <apex:column headerValue="id"> 
+             <apex:outputField value="{!a.id}"/>
+             
+             </apex:column>
+             <apex:column headerValue="name">
+             <apex:outputField value="{!a.name}"/>
+             </apex:column>
+             <apex:inlineEditSupport event="onclick" showOnEdit="saveb,cancelb" hideOnEdit="editb"/>
+             </apex:pageBlockTable>
+             <apex:pageBlockButtons >
+             <apex:commandButton value="save" action="{!save}" id="saveb"/>
+             <apex:commandButton value="cancel" action="{!cancel}" id="cancelb"/>
+             <apex:commandButton value="edit" action="{!edit}" id="editb"/>
+             </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form> 
+</apex:page>

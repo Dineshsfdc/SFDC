@@ -1,0 +1,14 @@
+<apex:page controller="WebserviceCall">  
+<apex:form >
+<apex:PageBlock >
+  <apex:commandButton action="{!hello}" value="Initiate Webservice Call" /> <br /><br />
+
+  Currency From :<apex:inputText value="{!currencyFrom}"/><br />
+
+   Currency To &nbsp; &nbsp;:<apex:inputText value="{!currencyTo}"/><br /><br />
+
+  Current Exchange rate is  --->  <apex:OutputText value="{!message}"/>
+
+  </apex:PageBlock>
+  </apex:form>
+</apex:page>

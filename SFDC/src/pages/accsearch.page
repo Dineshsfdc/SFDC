@@ -1,0 +1,8 @@
+<apex:page controller="mycontrol">
+<apex:form >
+      <apex:commandButton value="Get Record" action="{!search}" >       
+         <apex:param id="aname" name="paramName" value="string" />  
+     </apex:commandButton>  
+     </apex:form>
+ 
+</apex:page>

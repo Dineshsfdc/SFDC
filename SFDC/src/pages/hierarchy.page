@@ -1,0 +1,14 @@
+<apex:page controller="hierarchycontroller">
+  <apex:form >  
+     <apex:pageBlock >  
+         <apex:pageblockSection columns="1" title="Hierarchy For {!AccountName}">  
+             <apex:repeat value="{!hierarchyItemList}" var="item">  
+                <apex:pageBlockSectionItem >  
+                    <apex:outputLabel value="{!item.itemValue}" escape="false"/>  
+                </apex:pageBlockSectionItem>  
+             </apex:repeat>  
+         </apex:pageblockSection>  
+     </apex:pageBlock>  
+  </apex:form>  
+  
+</apex:page>

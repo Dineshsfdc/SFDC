@@ -1,0 +1,15 @@
+<apex:page controller="ajaxcontrol">
+  <apex:form >
+   <apex:pageblock >
+     Hi <b><i>{!$User.FirstName}</i></b> Click following button to show current time..
+    <apex:commandButton action="{!setcurrtime}" value="show time" rerender="ajaxresult"/>
+   </apex:pageblock>
+   
+   <apex:pageBlock title="AjaxData">
+     <apex:outputPanel id="ajaxresult" layout="block">
+         Time: {!CurrTime}
+  </apex:outputPanel>
+ </apex:pageBlock>
+
+</apex:form>
+</apex:page>

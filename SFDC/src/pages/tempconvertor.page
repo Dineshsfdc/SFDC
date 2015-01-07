@@ -1,0 +1,16 @@
+<apex:page controller="WebserviceCall1">  
+<apex:form >
+<apex:PageBlock title="Invoke External webservices">
+<apex:pageBlockSection columns="4">
+Enter Farenheit :<apex:inputText value="{!faran}"/>
+  <apex:commandButton action="{!celsius}" value="Faranheit to celsius" /> 
+     <apex:OutputText value="{!farantocelresult}"/>
+</apex:pageBlockSection>
+<apex:pageblockSection columns="4">
+Enter Celsius :<apex:inputText value="{!celsius}"/>
+  <apex:commandButton action="{!faran}" value="Celsius to farenheit"/> 
+  <apex:OutputText value="{!celtofaranresult }"/>
+</apex:pageblockSection>
+  </apex:PageBlock>
+  </apex:form>
+</apex:page>

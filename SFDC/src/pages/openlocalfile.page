@@ -1,0 +1,18 @@
+<apex:page standardController="account">
+<!--<script type="text/javascript">
+Process.Start('IExplore.exe');
+window.onload('file:///D:/dinesh/ss.txt/'); 
+</script> 
+<a href = 'www.google.com'>hi</a>
+<apex:form >
+</apex:form>-->
+
+<script type="text/vbscript" language="vbscript">
+        sub testing()
+            Set wshShell = CreateObject ("WSCript.shell")
+            wshshell.run "c:\Windows\Notepad.exe ss.txt"
+            set wshshell = nothing
+        end sub
+    </script>
+    <a href="javascript:testing()">Test</a>
+</apex:page>

@@ -1,0 +1,5 @@
+<apex:page >
+    <apex:outputText value="Welcome"/><br/>
+    <apex:insert name="msg1"/><br/>
+    <apex:insert name="msg2"/><br/> 
+</apex:page>

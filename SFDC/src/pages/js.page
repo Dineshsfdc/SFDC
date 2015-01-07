@@ -1,0 +1,23 @@
+<apex:page controller="sample">
+ <script type="text/javascript">
+ function find()
+ {
+ callfind();
+ }
+ </script>
+ <apex:form >
+ <apex:actionFunction name="callfind()" action="{!searchfind}"/>
+ <apex:pageBlock >
+ <apex:pageblockSection title="find">
+
+ <apex:outputLabel >query</apex:outputLabel>
+ <apex:inputtext value="{!qry}"/>
+
+ </apex:pageblockSection>
+ <apex:pageblockButtons >
+ <apex:commandButton value="find" onclick="find()"/>
+ </apex:pageblockButtons>
+ </apex:pageBlock>
+ 
+ </apex:form>
+</apex:page>

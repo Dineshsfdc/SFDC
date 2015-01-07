@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <frameHeight>735</frameHeight>
+    <hasSidebar>true</hasSidebar>
+    <icon>Public_folder/favicon.jpg</icon>
+    <label>WikiOrgCharts</label>
+    <mobileReady>false</mobileReady>
+    <motif>Custom171: TV Widescreen</motif>
+    <url>https://salesforce.wikiorgcharts.com/dispach.php?wikilocation=salesforce/main&amp;sfapisessionid={!API.Session_ID}&amp;sfapipartnerserverurl={!API.Partner_Server_URL_200}</url>
+    <urlEncodingKey>UTF-8</urlEncodingKey>
+</CustomTab>

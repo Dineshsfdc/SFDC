@@ -1,0 +1,24 @@
+<apex:page standardController="account" extensions="Acctest">
+<apex:form >
+ <apex:pageBlock >
+ <apex:pageblockbuttons >
+ 
+ <apex:commandButton value="Save" Action="{!save}"/>
+ <apex:commandButton value="Saveandnew" Action="{!saveandnew}"/>
+ <apex:commandButton action="{!view}" value="View" /> 
+ <apex:commandButton action="{!cancel}" value="Cancel" />
+ <apex:commandButton action="{!edit}" value="Edit" />    
+ 
+<!-- <apex:commandButton action=”{!delete}” value=”Delete” />  
+ <apex:commandButton action=”{!list}” value=”List” />  
+ <apex:commandButton action=”{!quickSave}” value=”Quick Save” />-->      
+  
+  <apex:commandButton value="save1" Action="{!save1}"/>
+ </apex:pageblockbuttons>
+ <apex:pageBlockSection >
+ <apex:inputField value="{!account.name}"/>
+ <apex:outputText value="{!name}"></apex:outputText> 
+ </apex:pageBlockSection>
+ </apex:pageBlock>
+ </apex:form>
+</apex:page>

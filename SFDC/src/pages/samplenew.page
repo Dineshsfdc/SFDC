@@ -1,0 +1,20 @@
+<apex:page standardController="Account" tabstyle="Account" action="{!if($Profile.Name =='System Administrator', null,urlFor($Action.Account.Tab, $ObjectType.Account,null, true))}">
+<script type="text/javascript">
+function call()
+{
+alert("Hi..............");
+}
+</script>
+  <apex:form id="f1">
+  <apex:pageblock title="pb" mode="edit">
+   <apex:pageblocksection title="pbs" columns="2">
+  
+  <apex:inputfield value="{!account.name}"/>
+   <apex:inputfield value="{!account.phone}"/>
+    <apex:inputfield value="{!account.type}"/>
+   <apex:inputsecret value="{!account.accountnumber}" required="true"/>  
+  </apex:pageblocksection>
+  </apex:pageblock>
+  
+  </apex:form>
+</apex:page>

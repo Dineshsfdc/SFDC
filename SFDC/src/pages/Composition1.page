@@ -1,0 +1,8 @@
+<apex:page >
+    <apex:composition template="Composition">
+        <apex:define name="msg2"> Here is the example for insert tag in salesforce 
+                        </apex:define>
+        <apex:define name="msg1"> This text is passed from InsertEx2 Visualforce page 
+                        </apex:define>
+    </apex:composition>
+</apex:page>

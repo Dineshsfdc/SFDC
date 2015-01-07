@@ -1,0 +1,9 @@
+<apex:page sidebar="false" controller="searchcontrol1" >
+<apex:form >
+<apex:outputLabel style="font-weight:bold;" value="Search By ID:" ></apex:outputLabel>
+<apex:inputText value="{!textData}"/>
+<apex:commandButton value="Search" action="{!result}"/>
+<apex:param id="pa" name="par" value="string"/>
+<br/> <br/>
+</apex:form>
+</apex:page>

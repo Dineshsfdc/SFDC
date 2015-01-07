@@ -1,0 +1,10 @@
+<apex:page standardController="Opportunity" tabStyle="Opportunity"> 
+<apex:form > 
+<apex:pageBlock >
+<apex:outputLabel value="Opp Name"/>
+<apex:inputtext value="{!opportunity.name}" id="theName"/>
+<apex:outputLabel value="Opp id" for="theid"/>
+<apex:inputtext value="{!opportunity.id}" id="theid"/>
+</apex:pageBlock> 
+</apex:form>
+</apex:page>

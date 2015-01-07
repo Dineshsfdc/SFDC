@@ -1,0 +1,44 @@
+<apex:page controller="treeviewcon" sidebar="false" showHeader="false">
+<html>
+<head>
+    <apex:includeScript value="{!URLFOR($Resource.jquery, '/js/jquery-1.4.2.min.js')}"  />
+   <apex:includeScript value="{!URLFOR($Resource.jquery, '/js/jquery-ui-1.8.6.custom.min.js')}"  />
+   <apex:stylesheet value="{!URLFOR($Resource.jquery, '/css/ui-lightness/jquery-ui-1.8.6.custom.css')}"/>
+     <apex:stylesheet value="http://jquery.bassistance.de/jtreeview1/jquery.treeview.css"/>
+    <apex:includeScript value="http://jquery.bassistance.de/jtreeview1/lib/jquery.js"/>
+    <apex:includeScript value="http://jquery.bassistance.de/jtreeview1/lib/jquery.cookie.js"/>
+    <apex:includeScript value="http://jquery.bassistance.de/jtreeview1/jquery.treeview.js"/>
+    <apex:includeScript value="http://jquery.bassistance.de/jtreeview1/demo/demo.js"/>
+    
+  <style type="text/css">
+  #browser {
+    font-family: Verdana, helvetica, arial, sans-serif;
+    font-size: 120%;
+    font-weight:bold;
+  }
+  </style>
+  <script>
+  $(document).ready(function(){
+    $("#browser").treeview();
+  });
+  </script>
+</head>
+<body><br/><br/>
+<div style="width:300px;margin-left:50px;">
+<apex:pageBlock >
+  <ul id="browser" class="filetree">
+    <apex:repeat value="{!accnts}" var="acc">
+    <li class="closed"><span class="folder">{!acc.name}</span>
+        <ul>
+            <apex:repeat value="{!acc.contacts}" var="c">
+            <li><span class="file"><a href="/{!c.id}" target="_blank">{!c.name}</a></span></li>
+            </apex:repeat>
+        </ul>
+    </li>
+    </apex:repeat>
+   </ul>
+   </apex:pageBlock>
+   </div>
+</body>
+</html>
+</apex:page>

@@ -1,0 +1,13 @@
+<apex:page controller="CalenderConnect">
+<apex:form >
+  <apex:commandLink value="Add Event to My Calender" action="{!displayCalender}"/><br/>
+  <apex:outputPanel rendered="{!calenderShow}">
+  <apex:pageMessages ></apex:pageMessages>
+  <apex:outputLabel value="Outlook Email:"></apex:outputLabel>
+  <apex:inputText value="{!emailValue}"/> 
+  <apex:commandLink action="{!outlookConnect}" value="OutLook"/><br/>
+  <apex:commandLink target="_blank" action="{!doYahooconnectCall}" value="Yahoo"/><br/>
+  <apex:commandLink target="_blank" action="{!googleConnectCall}" value="Google"/>
+  </apex:outputPanel>
+</apex:form>
+</apex:page>

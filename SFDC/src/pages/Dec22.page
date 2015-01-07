@@ -1,0 +1,55 @@
+<apex:page controller="dec22controller" sidebar="false" showHeader="false">
+<style type="text/css">
+
+#divtop
+ { 
+  background-color:#FAEBD7;
+   color:black;
+    height:200px;
+     padding-left:50px;
+      margin-left:100px;
+       margin-right:100px;
+        margin-top:100px;
+         margin-bottom:100px;
+          text-align:center;
+           text-indent:25px;
+            text-decoration:underline;
+             text-transform:capitalize;
+              font-family:"times new roman";
+               font-size:20px;
+                hover:color: #FF00FF
+            
+ }
+ #div2{text-align:center;border:1px solid red;background-color:#FAEBD7;}
+ a:link
+ {
+  color:red;
+ }
+ a:visited
+ {
+  color: blue;
+ }
+ a:hover
+ {
+  color: #FF00FF;
+  font-size:50px;
+ }
+ 
+  </style>
+ <apex:form id="form1" >  
+ <a href="www.google.com">google</a>
+ <div id = "divtop">
+  <p>top div</p>
+  <p>This is the sample for div tag</p>
+ </div>
+ <div>1</div>
+  <div id="div2">2</div>
+   <div id="div2">3</div>
+    <div>4</div>
+     <div>5</div>
+      <div>6</div>
+       <div>7</div>
+       
+ </apex:form>
+
+</apex:page>

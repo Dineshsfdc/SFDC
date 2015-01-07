@@ -1,0 +1,28 @@
+<apex:page standardcontroller="contact" id="page" extensions="printactivities" sidebar="false" showHeader="false">
+ <apex:form id="form">
+            <apex:commandlink value="Print" target="_blank" onclick="window.print();return false"/>      
+<table>
+  
+ <!--  <center><b><h1> Activity History </h1></b></center> -->
+  <apex:repeat value="{!acct}" var="acc">
+   <!--  <tr><td><apex:outputText value="{!acc.Name}"/></td></tr> -->
+  
+      <tr>
+      <apex:repeat value="{!acc.activityhistories}" var="cont">
+      
+      <table cellspacing="0" cellpadding="5" align="center" width="500px" font-size="80px" font-family="Times New Roman" border="1px solid black">
+        <tr><td color="blue">Subject: <apex:outputText value="{!cont.subject}"/></td></tr>
+         <tr><td>Realted to : <apex:outputfield value="{!cont.whatid}"/></td></tr>
+        <tr><td>Task: <apex:outputText value="{!cont.istask}"/></td></tr>
+         <tr><td>Due Date : <apex:outputText value="{!cont.ActivityDate}"/></td></tr>
+          <tr><td>Assigned to : <apex:outputfield value="{!cont.ownerid}"/></td></tr>
+           <tr><td>Last Modified Date : <apex:outputfield value="{!cont.LastModifiedDate}"/></td></tr>
+           </table>   
+           <br></br>        
+      </apex:repeat>
+    </tr>
+  </apex:repeat>
+</table>
+
+ </apex:form>
+</apex:page>
